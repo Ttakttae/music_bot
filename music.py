@@ -1,4 +1,4 @@
-import asyncio, youtube_dl, discord, yt_search, time, googleapiclient, os, python
+import asyncio, youtube_dl, discord, yt_search, time, googleapiclient, os
 
 from discord_slash import SlashCommand, SlashContext
 from dotenv import load_dotenv
