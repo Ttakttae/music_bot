@@ -1,0 +1,10 @@
+asyncio~=3.4.3
+discord~=1.7.3
+youtube_dl
+yt_search
+requests
+PyNaCl
+google-api-python-client
+discord-py-slash-command~=3.0.0
+billboard.py
+lyricsgenius
