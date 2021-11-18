@@ -1,6 +1,7 @@
-import asyncio, youtube_dl, discord, yt_search, time, googleapiclient
+import asyncio, youtube_dl, discord, yt_search, time, googleapiclient, os, python
 
 from discord_slash import SlashCommand, SlashContext
+from dotenv import load_dotenv
 from googleapiclient import discovery
 from discord import FFmpegPCMAudio, PCMVolumeTransformer
 from discord_slash.utils.manage_commands import create_option
