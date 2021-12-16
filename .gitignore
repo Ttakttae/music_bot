@@ -2,3 +2,4 @@ language_data/server_language.json
 /.idea/
 /node_modules/
 token.json
+/package-lock.json
