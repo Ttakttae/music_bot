@@ -29,6 +29,9 @@
     "libsodium-wrappers": "^0.7.9",
     "@discordjs/voice": "^0.7.5",
     "@discordjs/opus": "^0.7.0",
-    "opusscript": "^0.0.8"
+    "opusscript": "^0.0.8",
+    "@discordjs/builders": "^0.9.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.25.2"
   }
 }
