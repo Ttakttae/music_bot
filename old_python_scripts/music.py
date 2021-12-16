@@ -23,9 +23,9 @@ option = {
 
 
 # scripts
-from scripts.music_player import *
-from scripts.music_playlist import *
-from scripts.language import *
+from old_python_scripts.music_player import *
+from old_python_scripts.music_playlist import *
+from old_python_scripts.language import *
 
 try:
     load_dotenv("./token.env")

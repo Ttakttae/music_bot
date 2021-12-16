@@ -1,0 +1,28 @@
+{
+  "name": "discord-js-musicbot",
+  "version": "0.1.0",
+  "description": "musicbot written with javascript",
+  "main": "music.js",
+  "scripts": {
+    "test": "node music.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ttakttae/music_bot.git"
+  },
+  "keywords": [
+    "musicbot",
+    "discord.js"
+  ],
+  "author": "hyunwoo6321",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ttakttae/music_bot/issues"
+  },
+  "homepage": "https://github.com/Ttakttae/music_bot#readme",
+  "dependencies": {
+    "ffmpeg": "0.0.4",
+    "discord.js": "^13.3.1",
+    "ytdl-core": "^4.9.1"
+  }
+}

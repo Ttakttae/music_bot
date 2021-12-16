@@ -1,8 +1,8 @@
 """서버별 플레이 담당"""
 
 import asyncio
-from scripts.music_playlist import *
-from scripts.language import *
+from old_python_scripts.music_playlist import *
+from old_python_scripts.language import *
 from discord import FFmpegPCMAudio, PCMVolumeTransformer
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5','options': '-vn'}
 
