@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
-const { token } = require("./token.json");
+const { token } = require("../token.json");
 const clientId = '882994932221116417';
 
 const commands = [
