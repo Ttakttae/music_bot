@@ -1,6 +1,5 @@
 const { Client, Intents, MessageActionRow, MessageButton } = require('discord.js');
 const { AudioPlayerStatus, AudioResource, entersState, joinVoiceChannel, JoinVoiceChannelOptions, VoiceConnectionStatus, getVoiceConnection } = require('@discordjs/voice');
-const { token } = require("./token.json");
 const ytdl = require('ytdl-core');
 const clientId = '882994932221116417';
 const lng = require('./scripts/translate.js');
@@ -102,4 +101,4 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
