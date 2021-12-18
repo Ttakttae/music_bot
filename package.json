@@ -34,5 +34,9 @@
     "sodium": "^3.0.2",
     "tweetnacl": "^1.0.3",
     "ytdl-core": "^4.9.1"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
   }
 }
