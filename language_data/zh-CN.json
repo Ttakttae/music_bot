@@ -50,7 +50,7 @@
   "song.add" : "这首歌是添加的",
   "delete.no.song" : "播放列表中没有歌曲",
   "no.song.loop" : "没有歌曲周期",
-  "no.lang" : "没有``{}``等语言",
+  "choose.lang" : "请选择语言。",
   "no.permission" : "我没有权限进入语音通道。",
   "enter.voice_channel" : "输入语音通道后请订购 <@{}>",
   "voice.shuffle" : "混杂着歌曲",

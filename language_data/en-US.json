@@ -50,7 +50,7 @@
   "song.add" : "🎵the song is added",
   "delete.no.song" : "there is no song❌ in the playlist",
   "no.song.loop" : "there is no 🎵song❌ to loop🔁",
-  "no.lang" : "there is no language called ``{}``",
+  "choose.lang" : "Please choose the language.",
   "no.permission" : "I have no permission❌ to enter the voice channel",
   "enter.voice_channel" : "please order after entering the voice channel <@{}>",
   "voice.shuffle" : "🎵song is now 🔀shuffling",

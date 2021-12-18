@@ -16,7 +16,7 @@ const commands = [
     new SlashCommandBuilder().setName('skip').setDescription('노래를 건너뜁니다'),
     new SlashCommandBuilder().setName('delete').setDescription('노래를 삭제합니다').addNumberOption(option => option.setName('number').setDescription('삭제할 노래의 숫자(재생목록에 나온 숫자 기준)').setRequired(true)),
     new SlashCommandBuilder().setName('loop').setDescription('노래 한곡이나 전체를 반복하거나, 반복을 끕니다').addStringOption(option => option.setName('mode').setDescription('한곡: single, 전체: all, 셔플(무작위 재생): shuffle, 끄기: off').setRequired(true)),
-    new SlashCommandBuilder().setName('language_change').setDescription('출력되는 언어(slash command 이름이나 설명 아님)를 변경합니다').addStringOption(option => option.setName('language').setDescription('다음중 선택(korean, english, chinese, japanese)').setRequired(true)),
+    new SlashCommandBuilder().setName('language_change').setDescription('출력되는 언어(slash command 이름이나 설명 아님)를 변경합니다'),
     new SlashCommandBuilder().setName('billboard').setDescription('빌보드 차트를 출력합거나, 숫자를 입력하면 그 숫자에 해당하는 노래를 재생합니다').addNumberOption(option => option.setName('number').setDescription('빌보드 차트 숫자(중복 선택 가능 ex: 30, 20, 15 또는 1~4)').setRequired(false)),
     new SlashCommandBuilder().setName('lyrics').setDescription('현재 재생중인 곡(플레이 리스트의 가장 상위 곡)의 가사를 보여줍니다(링크 사용했을시 작동 거의 안됨)').addStringOption(option => option.setName('artist').setDescription('더 정확한 검색을 위한 아티스트 변수').setRequired(false)).addStringOption(option => option.setName('title').setDescription('더 정확한 검색을 위한 제목 변수(키워드 검색 사용자들은 필요 없음)').setRequired(false)),
     new SlashCommandBuilder().setName('clear').setDescription('재생목록의 노래들을 초기화합니다'),

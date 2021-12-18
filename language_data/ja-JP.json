@@ -50,7 +50,7 @@
   "song.add" : "曲が追加されました",
   "delete.no.song" : "プレイリストに曲はありません",
   "no.song.loop" : "ループへの曲はありません",
-  "no.lang" : "``{}``という言語はありません",
+  "choose.lang" : "言語を選択してください。",
   "no.permission" : "私は音声チャネルを入力する権限がありません",
   "enter.voice_channel" : "音声チャンネルに入った後は注文してください <@{}>",
   "voice.shuffle" : "歌をシャッフルします。",

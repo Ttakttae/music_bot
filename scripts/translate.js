@@ -34,15 +34,7 @@ function translate(language_type, language_keyword) {
 }
 
 exports.language_change = function (server_id, lang_to_change) {
-    if (lang_to_change === 'korean'){
-        set_language(server_id, "ko_KR");
-    } else if (lang_to_change === 'english'){
-        set_language(server_id, "en_US");
-    } else if (lang_to_change === 'chinese'){
-        set_language(server_id, "zh_CN");
-    } else if (lang_to_change === 'japanese'){
-        set_language(server_id, "ja_JP");
-    }
+    set_language(server_id, lang_to_change)
 }
 
 function set_language(server_id, lang_to_set) {
