@@ -1,8 +1,9 @@
 const { Client, Intents, MessageActionRow, MessageButton } = require('discord.js');
-const { AudioPlayerStatus, AudioResource, entersState, joinVoiceChannel, JoinVoiceChannelOptions, VoiceConnectionStatus, getVoiceConnection } = require('@discordjs/voice');
+const { AudioPlayerStatus, AudioResource, entersState, joinVoiceChannel, JoinVoiceChannelOptions, VoiceConnectionStatus, getVoiceConnection, createAudioPlayer, createAudioResource, NoSubscriberBehavior } = require('@discordjs/voice');
 const ytdl = require('ytdl-core');
 const clientId = '882994932221116417';
 const lng = require('./scripts/translate.js');
+const {getVideoID} = require("ytdl-core");
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -28,6 +29,28 @@ client.on('interactionCreate', async interaction => {
     } else if (commandName === 'play') {
         const song = interaction.options.getString('song');
         await interaction.reply('노래를 찾는중입니다');
+        var info = await ytdl.getInfo(song, {downloadURL: true, filter: "audioonly", quality: 'highestaudio', audioBitrate: 160 , audioCodec: 'opus'});
+        for (var n in info["formats"]) {
+            if (info["formats"][n]["audioCodec"] != null && info["formats"][n]["videoCodec"] === null && info["formats"][n]["audioBitrate"] >= 160) {
+                var audio_info = info["formats"][n];
+                break;
+            } else {
+
+            }
+        }
+        var audio_url = audio_info["url"];
+        var title = info.videoDetails.title;
+        const connection = getVoiceConnection(interaction.guildId);
+        const player = createAudioPlayer({
+            behaviors: {
+                noSubscriber: NoSubscriberBehavior.Pause,
+            },
+        });
+        const resource = createAudioResource(audio_url);
+        player.play(resource);
+        connection.subscribe(player);
+        console.log(resource);
+        console.log("노래를 재생합니다");
     } else if (commandName === 'pause') {
 
     } else if (commandName === 'resume') {
@@ -68,6 +91,8 @@ client.on('interactionCreate', async interaction => {
     const { customId } = interaction;
     if (customId === 'korean'){
         interaction.component.setDisabled(true);
+        interaction.component.setStyle("SUCCESS");
+        interaction.component.setLabel("Korean✔︎");
         interaction.update({
             components: [
                 new MessageActionRow().addComponents(interaction.component)
@@ -76,6 +101,8 @@ client.on('interactionCreate', async interaction => {
         lng.language_change(interaction.guildId, 'ko_KR');
     } else if (customId === 'english'){
         interaction.component.setDisabled(true);
+        interaction.component.setStyle("SUCCESS");
+        interaction.component.setLabel("English✔︎");
         interaction.update({
             components: [
                 new MessageActionRow().addComponents(interaction.component)
@@ -84,6 +111,8 @@ client.on('interactionCreate', async interaction => {
         lng.language_change(interaction.guildId, 'en_US');
     } else if (customId === 'chinese'){
         interaction.component.setDisabled(true);
+        interaction.component.setStyle("SUCCESS");
+        interaction.component.setLabel("Chinese✔︎");
         interaction.update({
             components: [
                 new MessageActionRow().addComponents(interaction.component)
@@ -92,6 +121,8 @@ client.on('interactionCreate', async interaction => {
         lng.language_change(interaction.guildId, 'zh_CN');
     } else if (customId === 'japanese'){
         interaction.component.setDisabled(true);
+        interaction.component.setStyle("SUCCESS");
+        interaction.component.setLabel("Japanese✔︎");
         interaction.update({
             components: [
                 new MessageActionRow().addComponents(interaction.component)
